@@ -1,10 +1,10 @@
 import './Footer.css'
 
 
-function Footer() { 
+function Footer(prop) { 
   return (
     <>
-       <span>© 2025 Cégep Marie-Victorin</span>
+       <span>{prop.span}</span>
     </>
   )
 }
