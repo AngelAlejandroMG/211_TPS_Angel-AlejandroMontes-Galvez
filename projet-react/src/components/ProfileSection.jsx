@@ -1,12 +1,14 @@
 import './ProfileSection.css'
+import card from '../assets/cards'
 
 
 function ProfileSection(prop) { 
+  const postCount = card.length
   return (
     <>
       <div class="profile">
                 <div class="profile-name-image">
-                    <img src={prop.profil} alt=""/>
+                    <img class="profile-image " src={prop.profil} alt=""/>
                     <h1 class="profile-user-name">{prop.nom}</h1>
                 </div>
                 <div class="profile-bio">
@@ -14,7 +16,7 @@ function ProfileSection(prop) {
                 </div>
                 <div class="profile-stats">
                     <ul>
-                        <li>{prop.post}</li>
+                        <li>{postCount} posts</li>
                         <li>{prop.followers}</li>
                         <li>{prop.following}</li>
                     </ul>

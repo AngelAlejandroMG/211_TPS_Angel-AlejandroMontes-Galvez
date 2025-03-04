@@ -12,7 +12,12 @@
     justify-content: space-between;
     align-items: center;
 }
-
+.profile-image {
+    width: 150px; 
+    height: 150px; 
+    border-radius: 50%; 
+    object-fit: cover; 
+  }
 .profile-name-image img {
     border-radius: 50%;
 }

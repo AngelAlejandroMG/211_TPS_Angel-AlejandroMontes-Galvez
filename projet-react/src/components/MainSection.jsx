@@ -23,7 +23,7 @@ function MainSection() {
     </header>
     
     <main>
-        <ProfileSection profil="https://images.unsplash.com/photo-1513721032312-6a18a42c8763?w=152&h=152&fit=crop&crop=faces" texte="Lorem ipsum dolor sit, amet consectetur adipisicing elit 📷✈️🏕️" nom="Jane Doe" post="4 posts" followers="188 followers" following="206 following"/>
+        <ProfileSection profil="src/Image/Panchito.JPG" texte="Bonsoir! :0, J'aime les patates" nom="Angel Montes"  followers="188 followers" following="206 following"/>
         <CardList>
           {cardElem}
         </CardList>

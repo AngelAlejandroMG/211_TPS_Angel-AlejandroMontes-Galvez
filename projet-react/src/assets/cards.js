@@ -1,27 +1,27 @@
 const card = [
     {
         id:1,
-        logo: "https://s3-us-west-2.amazonaws.com/s.cdpn.io/310408/psychopomp-500.jpg",
-        titre:"Psychopomp",
-        texte:"Japanese Breakfast"
+        logo: "src/Image/Kool Potato.jpg",
+        titre:"Potato",
+        texte:"I like potato!!!"
     },
     {
         id:2,
-        logo: "https://s3-us-west-2.amazonaws.com/s.cdpn.io/310408/lets-go-500.jpg",
-        titre:"let's go",
-        texte:"In Love With A Ghost"
+        logo: "src/Image/Akira.jpg",
+        titre:"The Real Goat",
+        texte:"Le père des shonens"
     },
     {
         id:3,
-        logo: "https://s3-us-west-2.amazonaws.com/s.cdpn.io/310408/beautiful-game-500.jpg",
-        titre:"The Beautiful Game",
-        texte:"Vulfpeck"
+        logo: "src/Image/Fernanfloo.jpg",
+        titre:"The One",
+        texte:"Meilleur youtubeur de tout les temps (à mon avis)"
     },
     {
         id:4,
-        logo: "https://s3-us-west-2.amazonaws.com/s.cdpn.io/310408/jane-doe-500.jpg",
-        titre:"Jane Doe",
-        texte:"Converge"
+        logo: "src/Image/chimchar.jpg",
+        titre:"The chosen one",
+        texte:"Meilleur starter de toute les générations"
     }
 ]
 
