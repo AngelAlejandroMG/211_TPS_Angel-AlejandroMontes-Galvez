@@ -1,4 +1,4 @@
-const card = [
+export const card = [
     {
         id:1,
         logo: "src/Image/Kool Potato.jpg",
@@ -25,12 +25,11 @@ const card = [
     }
 ]
 
-const profil = {
-    PhotoProfil: "src/Image/Panchito.JPG",
+export const profil = {
+    photoProfil: "src/Image/Panchito.JPG",
         Nom: "Angel Montes",
         texte: "Bonsoir! :0, J'aime les patates",
         post : card.length,
         followers: "188 followers",
         following: "206 following"
 }
-export default { card, profil };

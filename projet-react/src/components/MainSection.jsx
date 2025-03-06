@@ -10,7 +10,7 @@ function MainSection() {
     
       <main>
         <ProfileSection 
-          PhotoProfil={profil.PhotoProfil} 
+          photoProfil={profil.photoProfil} 
           texte={profil.texte} 
           Nom={profil.Nom}  
           post={profil.post} 

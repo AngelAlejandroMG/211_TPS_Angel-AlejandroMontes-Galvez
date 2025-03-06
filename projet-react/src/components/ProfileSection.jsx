@@ -1,4 +1,3 @@
-import React from 'react'
 import './ProfileSection.css'
 
 function ProfileSection(props) { 
@@ -6,7 +5,7 @@ function ProfileSection(props) {
     <>
       <div className="profile">
         <div className="profile-name-image">
-          <img className="profile-image" src={props.PhotoProfil} alt=""/>
+          <img className="profile-image" src={props.photoProfil} alt=""/>
           <h1 className="profile-user-name">{props.Nom}</h1>
         </div>
         <div className="profile-bio">
