@@ -22,6 +22,12 @@ const card = [
         logo: "src/Image/chimchar.jpg",
         titre:"The chosen one",
         texte:"Meilleur starter de toute les générations"
+    },
+    {
+        id:5,
+        logo: "src/Image/chimchar.jpg",
+        titre:"The chosen one",
+        texte:"Meilleur starter de toute les générations"
     }
 ]
 

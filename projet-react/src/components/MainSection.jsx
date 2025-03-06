@@ -23,7 +23,7 @@ function MainSection() {
     </header>
     
     <main>
-        <ProfileSection profil="src/Image/Panchito.JPG" texte="Bonsoir! :0, J'aime les patates" nom="Angel Montes"  followers="188 followers" following="206 following"/>
+        <ProfileSection/>
         <CardList>
           {cardElem}
         </CardList>

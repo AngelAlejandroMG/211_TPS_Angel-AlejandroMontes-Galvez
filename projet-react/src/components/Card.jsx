@@ -5,9 +5,9 @@ function Card() {
   return (
     <>
       {cards.map(card => (
-        <li className="card" key={card.id}>
-          <img className="card-image" src={card.logo} alt={card.titre} />
-          <div className="card-description">
+        <li class="card" key={card.id}>
+          <img class="card-image" src={card.logo} alt={card.titre} />
+          <div class="card-description">
             <h2>{card.titre}</h2>
             <p>{card.texte}</p>
           </div>

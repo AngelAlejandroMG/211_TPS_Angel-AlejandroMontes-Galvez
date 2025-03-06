@@ -8,9 +8,10 @@
 }
 
 .card {
+    cursor: pointer;
     display: inline-block;
-    width: 20rem; /* Fixed width */
-    height: 25rem; /* Fixed height */
+    width: 20rem; 
+    height: 25rem; 
     margin: 1rem;
     font-size: 1rem;
     text-decoration: none;
