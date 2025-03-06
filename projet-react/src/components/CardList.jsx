@@ -1,12 +1,21 @@
-import Card from './Card'
+import Card from './Card.jsx'
 import './CardList.css'
 
 
-function CardList() { 
+
+function CardList(props) { 
+  const cardElem = props.cards.map(card => {
+    return <Card
+            key={card.id}
+            logo={card.logo}
+            titre={card.titre}
+            texte={card.texte}
+    />
+  })
   return (
     <>
-       <ul class="card-list">
-        <Card/>
+       <ul className="card-list">
+          {cardElem}
         </ul> 
     </>
   )

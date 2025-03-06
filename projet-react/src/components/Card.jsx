@@ -1,18 +1,19 @@
 import React from "react"
-import cards from '../assets/cards.js'
+import './Card.css'
 
-function Card() { 
+function Card(props) { 
+
+
   return (
-    <>
-      {cards.map(card => (
-        <li class="card" key={card.id}>
-          <img class="card-image" src={card.logo} alt={card.titre} />
+    <>   
+        <li class="card" key={props.id}>
+          <img class="card-image" src={props.logo} alt={props.titre} />
           <div class="card-description">
-            <h2>{card.titre}</h2>
-            <p>{card.texte}</p>
+            <h2>{props.titre}</h2>
+            <p>{props.texte}</p>
           </div>
         </li>
-      ))}
+    
     </>
   )
 }

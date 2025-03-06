@@ -22,13 +22,15 @@ const card = [
         logo: "src/Image/chimchar.jpg",
         titre:"The chosen one",
         texte:"Meilleur starter de toute les générations"
-    },
-    {
-        id:5,
-        logo: "src/Image/chimchar.jpg",
-        titre:"The chosen one",
-        texte:"Meilleur starter de toute les générations"
     }
 ]
 
-export default card;
+const profil = {
+    PhotoProfil: "src/Image/Panchito.JPG",
+        Nom: "Angel Montes",
+        texte: "Bonsoir! :0, J'aime les patates",
+        post : card.length,
+        followers: "188 followers",
+        following: "206 following"
+}
+export default { card, profil };

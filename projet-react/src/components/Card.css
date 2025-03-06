@@ -1,0 +1,37 @@
+
+
+.card {
+    cursor: pointer;
+    display: inline-block;
+    width: 20rem; 
+    height: 25rem; 
+    margin: 1rem;
+    font-size: 1rem;
+    text-decoration: none;
+    overflow: hidden;
+    transition: transform 0.1s ease-in-out, box-shadow 0.1s;
+}
+
+.card:hover {
+    transform: translateY(-0.5rem) scale(1.0125);
+    box-shadow: 0 0.5em 3rem -1rem rgba(0,0,0,0.5);
+}
+
+.card-image {
+    width: 100%; 
+    height: 15rem; 
+    object-fit: cover; 
+}
+
+.card-description {
+    padding: 1em 0.5em;
+    color: rgba(255, 255, 255, 0.759);
+}
+
+.card-description > h2 {
+    margin: 0 0 0.5em;
+}
+
+.card-description > p {
+    margin: 0;
+}
