@@ -5,7 +5,7 @@ function ProfileSection(props) {
     <>
       <div className="profile">
         <div className="profile-name-image">
-          <img className="profile-image" src={props.photoProfil} alt=""/>
+          <img className="profile-image" src={props.photoProfil} alt={props.alt}/>
           <h1 className="profile-user-name">{props.Nom}</h1>
         </div>
         <div className="profile-bio">
@@ -13,7 +13,7 @@ function ProfileSection(props) {
         </div>
         <div className="profile-stats">
           <ul>
-            <li>{props.post} posts</li>
+            <li>{props.post}</li>
             <li>{props.followers}</li>
             <li>{props.following}</li>
           </ul>

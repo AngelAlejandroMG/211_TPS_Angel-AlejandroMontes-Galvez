@@ -10,6 +10,7 @@ function CardList(props) {
             logo={card.logo}
             titre={card.titre}
             texte={card.texte}
+            alt={card.alt}
     />
   })
   return (

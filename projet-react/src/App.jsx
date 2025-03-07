@@ -8,13 +8,19 @@ function App() {
   return (
     <>
     <header>
-        <Header logo="https://i.pinimg.com/736x/e8/88/cd/e888cd8d2708d8f0388198fd551a1a00.jpg" H1="MySocial"/>
+         <Header 
+            logo="https://i.pinimg.com/736x/e8/88/cd/e888cd8d2708d8f0388198fd551a1a00.jpg" 
+            H1="MySocial" 
+            alt="MySocial"
+         />
     </header>
     <main>
-      <MainSection/>
+         <MainSection/>
     </main>
     <footer>
-        <Footer span="© 2025 Cégep Marie-Victorin"/>
+         <Footer 
+            span="© 2025 Cégep Marie-Victorin"
+         />
     </footer>
     </>
   )
