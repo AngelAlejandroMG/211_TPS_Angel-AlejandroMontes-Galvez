@@ -1,17 +1,19 @@
-
-
 .container {
-    background: white;
+    background: #f3e5ab; 
     padding: 25px;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(165, 128, 85, 0.3); 
     width: 500px;
     max-width: 90%;
     text-align: center;
-}
-
-h1 {
-    font-size: 26px;
+    border: 3px dashed #c2b280; 
+  }
+  
+  h1 {
+    font-size: 28px;
     margin-bottom: 20px;
-    color: #333;
-}
+    color: #4b3621; 
+    font-family: 'Comic Sans MS', cursive, sans-serif; 
+    text-shadow: 1px 1px #fff8dc; 
+  }
+  

@@ -1,32 +1,33 @@
 import './App.css'
 import React from 'react'
 import { useState } from 'react'
-import TodoForm from './component/TodoForm'
-import TodoList from './component/TodoList'
+import TodoForm from './component/TodoFrom.jsx'
+import TodoList from './component/TodoList.jsx'
 
 
 
 function App() { 
   const [todo, setTodo] = useState([])
 
-  const ajouterTache = texte=> {
-    const nouvelleTache = {
-      id: Date.now(),
-      description: texte,
-      terminee: false
-    }
-    setTodo([...todo, nouvelleTache])
-  };
+  function ajouterTaches(formData) {
+    setTodo(prevTodo => [...prevTodo, {
+      id: 1 + Math.random(),
+      description: formData.get("description"),
+      status: false
+    }])
 
-  const changerStatus = id => {
+  }
+  function changerStatus(id) {
     setTodo(
-      todo.map(
-        tache => tache.id == id ? {...tache, termine: !tache.termine} : tache //me permettre de faire un operateur terneraire en d/composant grace au id les tache
+      todo.map( 
+        tache => tache.id === id ? { ...tache, status: !tache.status } : tache
       )
     )
-  };
+  }
 
-  const supprimerTache = id => {
+  
+
+  function supprimerTache (id) {
     setTodo(
       todo.filter(tache => tache.id != id))
   };
@@ -35,8 +36,9 @@ function App() {
     <>
     <div className="container">
       <h1>Liste de taches</h1>
-      <TodoForm ajouterTache={ajouterTache} />
+      <TodoForm ajouterTache={ajouterTaches} />
       <TodoList todo={todo} changerStatus={changerStatus} supprimerTache={supprimerTache} />
+      
     </div>
     </>
   )

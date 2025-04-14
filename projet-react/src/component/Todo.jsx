@@ -1,23 +1,33 @@
 import './Todo.css'
 
-function Todo({ tache, changerStatus, supprimerTache }) {
+function Todo(props) {
+  function changerStat() {
+    props.changerStatus(props.id)
+    console.log(props.id)
+  }
+  
+  function supprimerTaches() {
+    props.supprimerTache(props.id)
+  }
+
+  
     
     
     return (
-        <li className={`todo-item ${tache.done ? 'done' : ''}`}>
+        <li key={props.id} className={`todo-item ${props.done ? 'done' : ''}`}>
         <p className="todo-text">
-          {tache.description}
+          {props.description}
         </p>
         <div className="todo-buttons">
           <button
-            className={`done-button ${tache.done ? 'unDone' : ''}`}
-            onClick={() => changerStatus(tache.id)}
+            className={`done-button ${props.done ? 'unDone' : ''}`}
+            onClick={changerStat}
           >
-            {tache.done ? '↩' : '✔'}
+            {props.done ? '↩' : '✔'}
           </button>
           <button
             className="delete-button"
-            onClick={() => supprimerTache(tache.id)}
+            onClick={supprimerTaches}
           >
             ✖
           </button>

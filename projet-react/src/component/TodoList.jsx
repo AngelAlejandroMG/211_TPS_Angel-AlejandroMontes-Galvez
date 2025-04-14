@@ -2,15 +2,16 @@ import React from 'react';
 import Todo from './Todo';
 import './TodoList.css';
 
-function TodoList({ todo, changerStatus, supprimerTodo }) {
+function TodoList(props) {
   return (
     <ul className="todo-list">
-      {todo.map((list) => (
+      {props.todo.map((list) => (
         <Todo
-        key={list.id}
-        todo={list}
-        changerStatus={changerStatus}
-        supprimerTodo={supprimerTodo}
+        id={list.id}
+        description={list.description}
+        changerStatus={props.changerStatus}
+        supprimerTache={props.supprimerTache}
+        done={list.status}
         />
       ))}
     </ul>

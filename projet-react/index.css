@@ -1,6 +1,7 @@
 body {
     font-family: 'Poppins', sans-serif;
-    background: linear-gradient(135deg, #667eea, #764ba2);
+    background: #9CAF88;
+    background-image: radial-gradient(#D2B48C 1px, transparent 1px);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -8,3 +9,10 @@ body {
     margin: 0;
   }
   
+  #patate {
+    width: 100px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: block;
+  }

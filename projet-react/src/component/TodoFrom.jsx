@@ -1,30 +1,19 @@
-import React, { use } from "react";
-import { useState } from "react";
-import "./TodoForm.css"; 
+import React from "react"
+import './TodoFrom.css'
 
-function TodoForm({ ajouterTache }) {
-    const [tache, setTache] = useState("");
-
-
-    function handleSubmit(event) {
-        event.preventDefault();
-        if (tache.trim()) {
-            ajouterTache(tache);
-            setTache("");
-        }
-    }
+function TodoForm(props) {
+       
     return (
         
         <div className="todo-input">
-            <form className="todo-input" onSubmit={handleSubmit}>
+            <form className="todo-input" action={props.ajouterTache}>
             <input
                 type="text"
-                value={tache}
-                onChange= {oc => setTache(oc.target.value)} // chercher sur internet pour simplifier le code
+                name="description"
                 placeholder="Ajouter une nouvelle tâche"
             />
+                <button>Ajouter</button>
             </form>
-            <button type="submit">Ajouter</button>
         </div>
     );
 }
