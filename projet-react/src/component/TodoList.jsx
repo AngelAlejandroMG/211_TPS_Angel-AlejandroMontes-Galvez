@@ -5,13 +5,14 @@ import './TodoList.css';
 function TodoList(props) {
   return (
     <ul className="todo-list">
-      {props.todo.map((list) => (
+      {props.todo.map((tache) => (
         <Todo
-        id={list.id}
-        description={list.description}
+        id={tache.id}
+        key={tache.id}
+        description={tache.description}
         changerStatus={props.changerStatus}
         supprimerTache={props.supprimerTache}
-        done={list.status}
+        done={tache.status}
         />
       ))}
     </ul>

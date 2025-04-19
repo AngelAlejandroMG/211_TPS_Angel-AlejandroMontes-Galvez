@@ -6,7 +6,7 @@ function TodoForm(props) {
     return (
         
         <div className="todo-input">
-            <form className="todo-input" action={props.ajouterTache}>
+            <form className="todo-input" action={props.ajouterTaches}>
             <input
                 type="text"
                 name="description"

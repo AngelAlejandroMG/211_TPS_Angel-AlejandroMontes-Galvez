@@ -10,19 +10,32 @@ function App() {
   const [todo, setTodo] = useState([])
 
   function ajouterTaches(formData) {
-    setTodo(prevTodo => [...prevTodo, {
-      id: 1 + Math.random(),
-      description: formData.get("description"),
-      status: false
-    }])
-
+    const description = formData.get("description").trim(); 
+    if (description) { 
+      setTodo((prevTodo) => [
+        ...prevTodo,
+        {
+          id: prevTodo.length + 1, 
+          description: description,
+          status: false,
+        },
+      ]);
+    } else {
+      console.error("La description de la tâche est vide."); 
+    }
   }
+
+
   function changerStatus(id) {
-    setTodo(
-      todo.map( 
-        tache => tache.id === id ? { ...tache, status: !tache.status } : tache
-      )
-    )
+    setTodo((prevTodo) => {
+      return prevTodo.map((tache) => {
+        if (tache.id === id) {
+          return { ...tache, status: !tache.status };
+        } else {
+          return tache;
+        }
+      });
+    });
   }
 
   
@@ -36,7 +49,7 @@ function App() {
     <>
     <div className="container">
       <h1>Liste de taches</h1>
-      <TodoForm ajouterTache={ajouterTaches} />
+      <TodoForm ajouterTaches={ajouterTaches} />
       <TodoList todo={todo} changerStatus={changerStatus} supprimerTache={supprimerTache} />
       
     </div>
