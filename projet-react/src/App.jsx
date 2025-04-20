@@ -1,60 +1,47 @@
-import './App.css'
-import React from 'react'
-import { useState } from 'react'
-import TodoForm from './component/TodoFrom.jsx'
-import TodoList from './component/TodoList.jsx'
+import Header from './component/Header';
+import MemeGenerator from './component/MemeGenerator';
+import Footer from './component/Footer';
+import React, { useState } from 'react';
+import './App.css';
 
+function App() {
+  const [topText, setTopText] = useState('');
+  const [bottomText, setBottomText] = useState('');
+  const [memeImage, setMemeImage] = useState('https://i.imgflip.com/1bij.jpg');
 
-
-function App() { 
-  const [todo, setTodo] = useState([])
-
-  function ajouterTaches(formData) {
-    const description = formData.get("description").trim(); 
-    if (description) { 
-      setTodo((prevTodo) => [
-        ...prevTodo,
-        {
-          id: prevTodo.length + 1, 
-          description: description,
-          status: false,
-        },
-      ]);
-    } else {
-      console.error("La description de la tâche est vide."); 
-    }
-  }
-
-
-  function changerStatus(id) {
-    setTodo((prevTodo) => {
-      return prevTodo.map((tache) => {
-        if (tache.id === id) {
-          return { ...tache, status: !tache.status };
-        } else {
-          return tache;
-        }
+  function getNewMemeImage() {
+    fetch('https://api.imgflip.com/get_memes')
+      .then(response => response.json())
+      .then(memeData => {
+        const memes = memeData.data.memes;
+        const randomIndex = Math.floor(Math.random() * memes.length);
+        const randomMeme = memes[randomIndex];
+        setMemeImage(randomMeme.url);
       });
-    });
   }
 
-  
+  function gererTexteHaut(event) {
+    setTopText(event.currentTarget.value);
+  }
 
-  function supprimerTache (id) {
-    setTodo(
-      todo.filter(tache => tache.id != id))
-  };
+  function gererTexteBas(event) {
+    setBottomText(event.currentTarget.value);
+  }
 
   return (
-    <>
-    <div className="container">
-      <h1>Liste de taches</h1>
-      <TodoForm ajouterTaches={ajouterTaches} />
-      <TodoList todo={todo} changerStatus={changerStatus} supprimerTache={supprimerTache} />
-      
+    <div className="app-main">
+      <Header />
+      <MemeGenerator
+        getNewMemeImage={getNewMemeImage}
+        gererTexteBas={gererTexteBas}
+        gererTexteHaut={gererTexteHaut}
+        topText={topText}
+        bottomText={bottomText}
+        memeImage={memeImage}
+      />
+      <Footer />
     </div>
-    </>
-  )
+  );
 }
 
-export default App
+export default App;
