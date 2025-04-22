@@ -9,23 +9,38 @@ function App() {
   const [bottomText, setBottomText] = useState('');
   const [memeImage, setMemeImage] = useState('https://i.imgflip.com/1bij.jpg');
 
+
+  //charger  dans le montage
+  React.useEffect(() => {
+    fetch('https://api.imgflip.com/get_memes')
+      .then(response => response.json())
+      .then(memeData => {
+        const memes = memeData.data.memes;
+        const index = Math.floor(Math.random() * memes.length);
+        const randomMeme = memes[index];
+        setMemeImage(randomMeme.url);
+      });
+  }, []);
+
+
+  //obtenir une nouvelle image
   function getNewMemeImage() {
     fetch('https://api.imgflip.com/get_memes')
       .then(response => response.json())
       .then(memeData => {
         const memes = memeData.data.memes;
-        const randomIndex = Math.floor(Math.random() * memes.length);
-        const randomMeme = memes[randomIndex];
+        const index = Math.floor(Math.random() * memes.length);
+        const randomMeme = memes[index];
         setMemeImage(randomMeme.url);
       });
   }
 
-  function gererTexteHaut(event) {
-    setTopText(event.currentTarget.value);
+  function gererTexteHaut(texte) {
+    setTopText(texte.currentTarget.value);
   }
 
-  function gererTexteBas(event) {
-    setBottomText(event.currentTarget.value);
+  function gererTexteBas(texte) {
+    setBottomText(texte.currentTarget.value);
   }
 
   return (

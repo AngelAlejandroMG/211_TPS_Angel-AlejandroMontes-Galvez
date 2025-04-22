@@ -30,7 +30,7 @@ function MemeGenerator(props) {
             </div>
           <div className="memeTextBottom">
             {props.bottomText}
-            </div>
+            </div>-
           </div>
         </div>
       </div>
