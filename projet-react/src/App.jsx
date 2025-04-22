@@ -7,7 +7,7 @@ import './App.css';
 function App() {
   const [topText, setTopText] = useState('');
   const [bottomText, setBottomText] = useState('');
-  const [memeImage, setMemeImage] = useState('https://i.imgflip.com/1bij.jpg');
+  const [memeImage, setMemeImage] = useState(null);
 
 
   //charger  dans le montage
