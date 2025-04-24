@@ -1,15 +1,13 @@
-
 .footer {
-    background-color: #3b5998;  
-    color: #fff;
-    text-align: center;
-    padding: 18px 0 16px 0;
-    width: 100%;
-    font-size: 1rem;
-    letter-spacing: 0.5px;
-    box-sizing: border-box;
-    border-bottom-left-radius: 8px;
-    border-bottom-right-radius: 8px;
-    font-family: 'Times New Roman', Times, serif;
-  }
-  
+  background: linear-gradient(115deg, #021F4B, #4C3B71, #11526B);
+  color: #fff;
+  text-align: center;
+  padding: 18px 0 16px 0;
+  width: 100%;
+  font-size: 110%;
+  letter-spacing: 0.5px;
+  box-sizing: border-box;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  font-family: 'Times New Roman', Times, serif;
+}
