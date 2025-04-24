@@ -1,39 +1,58 @@
 import "./MemeGenerator.css";
+import React, { useState } from 'react';
 
 
 function MemeGenerator(props) {
+
+  const [topText, setTopText] = useState('');
+  const [bottomText, setBottomText] = useState('');
+
+  function gererTexteHaut(texte) {
+      setTopText(texte.currentTarget.value);
+    }
+  
+    function gererTexteBas(texte) {
+      setBottomText(texte.currentTarget.value);
+    }
+
     return (
+
       <div className="memeGenerator">
         <input 
         type="text" 
         placeholder="Texte en haut" 
-        onChange={props.gererTexteHaut}
-        value={props.topText}
+        onChange={gererTexteHaut}
+        value={topText}
         className="memeInput"
         />
+
         <br/><br/>
+
         <input 
         type="text" 
         placeholder="Texte en bas" 
-        onChange={props.gererTexteBas}
-        value={props.bottomText}
+        onChange={gererTexteBas}
+        value={bottomText}
         className="memeInput"
         />
+
         <br/><br/>
+
         <button className="memeBtn" onClick={props.getNewMemeImage}>Get a new meme image</button>
   
         <div className="memeContainer">
           <img src={props.memeImage} alt="Meme" className="memeImage"/>
           <div className="memeText">
             <div className="memeTextTop">
-            {props.topText}
+            {topText}
             </div>
           <div className="memeTextBottom">
-            {props.bottomText}
+            {bottomText}
             </div>-
           </div>
         </div>
       </div>
+      
     );
   }
   
